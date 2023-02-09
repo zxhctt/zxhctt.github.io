@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    
+  <video src="./js/Y.mp3" autoplay="autoplay" controls="controls" preload="auto" loop="loop" hidden="true"></video>
+    
+    <style>
+        * {
+            /* 常规初始化 */
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            /* 常规居中显示 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+
+            min-height: 100vh;
+            /* 黑色背景色 */
+            background-color: #000;
+        }
+
+        #heart {
+            /* 心的显示区域宽高 */
+            width: 750px;
+            height:750px;
+
+            /* 心跳的动画 */
+            animation: animate 1.3s infinite;
+        }
+
+        #text {
+            /* 中间文字的颜色、大小、字体阴影 */
+            color: white;
+            font-size: 5em;
+            text-align: center;
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #eb789c, 0 0 0.3em #eb73b9;
+            /* 稍微向上移一点，看起来在中间 */
+            margin-top: 7em;
+            /* 不让选中 */
+            user-select: none;
+
+            /* 定位放中间 */
+            position: absolute;
+
+            /* 同样的跟着心跳 */
+            animation: animate 5.8s infinite;
+        }
+        #texts {
+            /* 中间文字的颜色、大小、字体阴影 */
+            color: white;
+            font-size: 2em;
+            text-align: center;
+            text-shadow: 0 0 0.05em #fff, 0 0 0.2em #eb789c, 0 0 0.3em #eb73b9;
+            /* 稍微向上移一点，看起来在中间 */
+            margin-top: -1em;
+            /* 不让选中 */
+            user-select: none;
+
+            /* 定位放中间 */
+            position: absolute;
+
+            /* 同样的跟着心跳 */
+            animation: animate 5.8s infinite;
+        }
+        @keyframes animate {
+
+            /* 动画就是简单的放大缩小 */
+            0% {
+                transform: scale(1);
+            }
+
+            30% {
+                transform: scale(0.8);
+            }
+
+            60% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            #heart {
+                /* 小屏幕上面要小一圈，动画也要小一圈 */
+                transform: scale(0.5);
+                animation: animate-small 1.2s infinite;
+            }
+
+            #text {
+                /* 文字也小一点 */
+                font-size: 4em;
+                margin-top: -0.3em;
+
+                animation: animate-small 5.8s infinite;
+            }
+
+            @keyframes animate-small {
+                0% {
+                    transform: scale(0.5);
+                }
+
+                30% {
+                    transform: scale(0.4);
+                }
+
+                60% {
+                    transform: scale(0.6);
+                }
+
+                100% {
+                    transform: scale(0.5);
+                }
+            }
+        }
+
+
+
+        .snow,
+.snow::before,
+.snow::after {
+  /* 所有雪的元素，就从一个 div 延伸开 */
+  content: "";
+
+  /* 使用径向渐变做出雪花的样子 */
+  /* 不同大小，不同位置，尽量错开位置 */
+  background: radial-gradient(3px 3px at 100px 50px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 150px, #e6b0da, transparent),
+    radial-gradient(5px 5px at 300px 80px, #fff, transparent),
+    radial-gradient(6px 6px at 400px 130px, #fff, transparent),
+    radial-gradient(3px 3px at 540px 480px, #fff, transparent),
+    radial-gradient(4px 4px at 50px 230px, #fab3df, transparent),
+    radial-gradient(5px 5px at 120px 680px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 150px, #fff, transparent),
+    radial-gradient(5px 5px at 300px 80px, #fff, transparent),
+    radial-gradient(6px 6px at 400px 130px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 150px, #e6b0da, transparent),
+    radial-gradient(3px 3px at 540px 480px, #fff, transparent),
+    radial-gradient(4px 4px at 50px 230px, #fff, transparent),
+    radial-gradient(5px 5px at 120px 680px, #fff, transparent),
+    radial-gradient(6px 6px at 223px 430px, #fff, transparent),
+    radial-gradient(3px 3px at 700px 300px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 150px, #e6b0da, transparent),
+    radial-gradient(4px 4px at 760px 550px, #fff, transparent),
+    radial-gradient(5px 5px at 550px 280px, #fff, transparent),
+    radial-gradient(6px 6px at 650px 630px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 150px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 150px, #e6b0da, transparent), 
+    radial-gradient(4px 4px at 200px 150px, #e6b0da, transparent),
+    radial-gradient(5px 5px at 300px 80px, #fff, transparent),
+    radial-gradient(6px 6px at 400px 130px, #fff, transparent),
+    radial-gradient(3px 3px at 540px 480px, #fff, transparent),
+    radial-gradient(4px 4px at 200px 150px, #e6b0da, transparent),
+    radial-gradient(4px 4px at 200px 150px, #e6b0da, transparent),
+    radial-gradient(4px 4px at 50px 230px, #fff, transparent),
+    radial-gradient(5px 5px at 120px 680px, #fff, transparent),
+    radial-gradient(6px 6px at 223px 430px, #fff, transparent),
+    radial-gradient(3px 3px at 700px 300px, #fff, transparent),
+    radial-gradient(4px 4px at 760px 550px, #fff, transparent),
+    radial-gradient(5px 5px at 550px 280px, #fff, transparent),
+    radial-gradient(6px 6px at 650px 630px, #fff, transparent);
+  /* 限制雪花显示的范围，剩下的部分会自动复制填满 */
+  background-size: 800px 800px;
+
+  /* 让雪花定位显示在中间 */
+  position: absolute;
+  /* inset 在这相当于 top、right、bottom、left */
+  inset: -800px 0 0 0;
+
+  /* 雪花下落的动画 */
+  animation: animate 18s linear infinite;
+}
+.snow::before {
+  /* 错开显示多层雪花 */
+  margin: -990px;
+  /* 降低一点透明度，分层更明显 */
+  opacity: 0.9;
+
+  /* 下落动画的时间不一样，也是尽量错开 */
+  animation-duration: 6s;
+  animation-delay: -5.5s;
+}
+.snow::after {
+  /* 同上 */
+  margin: -230px;
+  opacity: 0.8;
+
+  animation-duration: 19s;
+}
+/* 
+@keyframes animate {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+   
+  } 动画就是简单的往下移动
+    transform: translateY(800px);
+} */
+
+
+
+
+    </style>
+</head>
+
+<body>
+
+
+    <canvas id="heart"></canvas>
+    <h1 id="texts"></h1>
+    <h1 id="text">Happy Valentine's Day</h1>
+    <div class="snow"></div>
+    <script>
+        /**
+     * 自动填充文字部分
+     */
+        /**
+         * 获取 url 参数
+         * @param {*} variable 传入 key
+         * @returns 有值就返回值，没有就返回 false
+         */
+        const getQueryVariable = (variable) => {
+            let query = window.location.search.substring(1);
+            let vars = query.split("&");
+            for (let i = 0; i < vars.length; i++) {
+                let pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return decodeURI(pair[1]);
+                }
+            }
+            return false;
+        };
+        /**
+         * 将 url 地址中的 t 参数放入文字显示区域
+         */
+        ((text) => {
+            let t = getQueryVariable("t");
+            if (t) {
+                text.innerHTML = t;
+            }
+        })(document.querySelector("#text"));
+
+        /**
+         * 下面全是 爱心代码部分
+         */
+        const settings = {
+            length: 300, // 最大颗粒数量
+            duration: 3.7, // 粒子持续时间
+            velocity: 150, // 粒子速度
+            effect: -0.7, // 超出部分
+            size: 28, // 粒子大小 （像素）
+           color:"#ff1f66",
+        };
+
+        /**
+         * Point
+         */
+        const Point = (() => {
+            function Point(x, y) {
+                this.x = typeof x !== "undefined" ? x : 0;
+                this.y = typeof y !== "undefined" ? y : 0;
+            }
+
+            Point.prototype.clone = function () {
+                return new Point(this.x, this.y);
+            };
+
+            Point.prototype.length = function (length) {
+                if (typeof length == "undefined") {
+                    return Math.sqrt(this.x * this.x + this.y * this.y);
+                }
+                this.normalize();
+                this.x *= length;
+                this.y *= length;
+                return this;
+            };
+
+            Point.prototype.normalize = function () {
+                let length = this.length();
+                this.x /= length;
+                this.y /= length;
+                return this;
+            };
+
+            return Point;
+        })();
+
+        /**
+         * Particle 粒子
+         */
+        const Particle = (() => {
+            function Particle() {
+                this.position = new Point();
+                this.velocity = new Point();
+                this.acceleration = new Point();
+                this.age = 0;
+            }
+
+            Particle.prototype.initialize = function (x, y, dx, dy) {
+                this.position.x = x;
+                this.position.y = y;
+                this.velocity.x = dx;
+                this.velocity.y = dy;
+                this.acceleration.x = dx * settings.effect;
+                this.acceleration.y = dy * settings.effect;
+                this.age = 0;
+            };
+
+            Particle.prototype.update = function (deltaTime) {
+                this.position.x += this.velocity.x * deltaTime;
+                this.position.y += this.velocity.y * deltaTime;
+                this.velocity.x += this.acceleration.x * deltaTime;
+                this.velocity.y += this.acceleration.y * deltaTime;
+                this.age += deltaTime;
+            };
+
+            Particle.prototype.draw = function (context, image) {
+                function ease(t) {
+                    return --t * t * t + 1;
+                }
+                let size = image.width * ease(this.age / settings.duration);
+                context.globalAlpha = 1 - this.age / settings.duration;
+                context.drawImage(
+                    image,
+                    this.position.x - size / 2,
+                    this.position.y - size / 2,
+                    size,
+                    size
+                );
+            };
+
+            return Particle;
+        })();
+
+        /**
+         * ParticlePool 粒子池
+         */
+        const ParticlePool = (() => {
+            let particles,
+                firstActive = 0,
+                firstFree = 0,
+                duration = settings.duration;
+
+            function ParticlePool(length) {
+                // 创建和填充粒子池
+                particles = new Array(length);
+                for (var i = 0; i < particles.length; i++) particles[i] = new Particle();
+            }
+
+            ParticlePool.prototype.add = function (x, y, dx, dy) {
+                particles[firstFree].initialize(x, y, dx, dy);
+
+                // 处理循环队列
+                firstFree++;
+                if (firstFree == particles.length) firstFree = 0;
+                if (firstActive == firstFree) firstActive++;
+                if (firstActive == particles.length) firstActive = 0;
+            };
+
+            ParticlePool.prototype.update = function (deltaTime) {
+                let i;
+
+                // 更新活动粒子
+                if (firstActive < firstFree) {
+                    for (i = firstActive; i < firstFree; i++) particles[i].update(deltaTime);
+                }
+                if (firstFree < firstActive) {
+                    for (i = firstActive; i < particles.length; i++)
+                        particles[i].update(deltaTime);
+                    for (i = 0; i < firstFree; i++) particles[i].update(deltaTime);
+                }
+
+                // 删除不活跃的粒子
+                while (particles[firstActive].age >= duration && firstActive != firstFree) {
+                    firstActive++;
+                    if (firstActive == particles.length) firstActive = 0;
+                }
+            };
+
+            ParticlePool.prototype.draw = function (context, image) {
+                // 画出活动粒子
+                if (firstActive < firstFree) {
+                    for (i = firstActive; i < firstFree; i++)
+                        particles[i].draw(context, image);
+                }
+                if (firstFree < firstActive) {
+                    for (i = firstActive; i < particles.length; i++)
+                        particles[i].draw(context, image);
+                    for (i = 0; i < firstFree; i++) particles[i].draw(context, image);
+                }
+            };
+
+            return ParticlePool;
+        })();
+
+        /**
+         * 绘制爱心
+         */
+        ((canvas) => {
+            let context = canvas.getContext("2d");
+            let particles = new ParticlePool(settings.length);
+            let particleRate = settings.length / settings.duration; // 粒子/秒
+            let time;
+
+            // 画出心对应的点 -PI <= t <= PI
+            function pointOnHeart(t) {
+                return new Point(
+                    180 * Math.pow(Math.sin(t), 3),
+                    135 * Math.cos(t) -
+                    55 * Math.cos(2 * t) -
+                    25 * Math.cos(3 * t) -
+                    13 * Math.cos(4 * t) +
+                    20
+                );
+            }
+
+            // 使用虚拟画布创建粒子图像
+            const image = (function () {
+                let canvas = document.createElement("canvas"),
+                    context = canvas.getContext("2d");
+                canvas.width = settings.size;
+                canvas.height = settings.size;
+
+                // 创建路径
+                function to(t) {
+                    let point = pointOnHeart(t);
+                    point.x = settings.size / 2 + (point.x * settings.size) / 350;
+                    point.y = settings.size / 2 - (point.y * settings.size) / 350;
+                    return point;
+                }
+                // 创建路径
+                context.beginPath();
+                let t = -Math.PI;
+                let point = to(t);
+
+                context.moveTo(point.x, point.y);
+                while (t < Math.PI) {
+                    t += 0.01; // 帧步数
+                    point = to(t);
+                    context.lineTo(point.x, point.y);
+                }
+                context.closePath();
+                // 创建填充颜色
+                context.fillStyle = settings.color;
+                context.fill();
+                // 创建图像
+                let image = new Image();
+                image.src = canvas.toDataURL();
+                return image;
+            })();
+
+            // 渲染
+            function render() {
+                // 下一个动画帧
+                requestAnimationFrame(render);
+
+                // 更新时间
+                let newTime = new Date().getTime() / 1000;
+                let deltaTime = newTime - (time || newTime);
+                time = newTime;
+
+                // 清理画布
+                context.clearRect(0, 0, canvas.width, canvas.height);
+
+                // 创建新的粒子
+                var amount = particleRate * deltaTime;
+                for (var i = 0; i < amount; i++) {
+                    var pos = pointOnHeart(Math.PI - 2 * Math.PI * Math.random());
+                    var dir = pos.clone().length(settings.velocity);
+                    particles.add(
+                        canvas.width / 2 + pos.x,
+                        canvas.height / 2 - pos.y,
+                        dir.x,
+                        -dir.y
+                    );
+                }
+
+                // 更新和绘制粒子
+                particles.update(deltaTime);
+                particles.draw(context, image);
+            }
+
+            // 重绘画布的大小
+            function onResize() {
+                canvas.width = canvas.clientWidth;
+                canvas.height = canvas.clientHeight;
+            }
+            window.onresize = onResize;
+
+            // 延迟渲染
+            setTimeout(function () {
+                onResize();
+                render();
+            }, 10);
+        })(document.getElementById("heart"));
+    </script>
+
+
+
+
+</body>
+
+</html>
